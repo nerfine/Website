@@ -1,0 +1,458 @@
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #111; /* Dark background color */
+    color: #fff; /* Light text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for background and text color */
+    h1, h2, h3, p {
+        color: #fff;
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100vh; /* Adjust the height as needed */
+    padding: 50px;
+    overflow: hidden;
+    @media only screen and (max-width: 768px) {
+        height: auto;
+    }
+}
+
+.hero-gif {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow effect */
+    letter-spacing: 2px; /* Adjust letter spacing */
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow effect */
+    @media only screen and (max-width: 768px) {
+        font-size: 2em;
+    }
+}
+
+/* Additional Styles for the rest of your website content */
+/* Header */
+header {
+    background-color: #1a1a1a; /* Darker header color */
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    font-family: 'Neon Lights', sans-serif; /* Use a bold and futuristic font family */
+    position: relative; /* Position relative for pseudo-element */
+    @media only screen and (max-width: 768px) {
+        padding: 0.5em;
+    }
+}
+
+
+h1 {
+    font-size: 36px; /* Adjust the font size as needed */
+    letter-spacing: 2px; /* Add letter-spacing for a bold look */
+}
+
+
+/* Apply animation to the pseudo-element */
+header::before {
+    animation: particleAnimation 3s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Section */
+section {
+    margin: 20px;
+    background: linear-gradient(to bottom right, #1a1a1a, #2f2f2f); /* Subtle gradient background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, background 0.3s ease; /* Smooth transition for box shadow and background */
+    position: relative; /* Position relative for pseudo-element */
+    @media only screen and (max-width: 768px) {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05; /* Adjust the opacity of the texture */
+    z-index: -1; /* Send pseudo-element behind the section content */
+}
+
+/* Headings */
+h2 {
+    color: #3498db; /* Blue for headings */
+}
+
+h3 {
+    color: #3498db; /* Blue for subsection headings */
+}
+
+/* Price Category List Items */
+.price-category li {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    @media only screen and (max-width: 768px) {
+        flex: 0 0 100%;
+    }
+}
+
+/* Payment Methods */
+#payment-methods ul {
+    text-align: center;
+}
+
+#payment-methods li {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+#payment-methods li img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+#payment-methods li strong {
+    font-weight: bold;
+}
+/* Prices Section */
+#prices {
+    text-align: center;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.price-category {
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 20px;
+    background-color: #1a1a1a; /* Darker price category background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.price-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.price-category h3 {
+    color: #03a9f4; /* Blue for price category headings */
+    margin-bottom: 10px;
+}
+
+.price-category li {
+    color: #bdc3c7;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Countdown and Discount Section */
+#discount {
+    text-align: center;
+    background-color: #e74c3c; /* Red background */
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#discount h2 {
+    color: #fff; /* White text for discount */
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #fff;
+    #countdown h2, #discount h2, #discount p, #countdown p {
+        color: #fff;
+        /* Other styles remain unchanged */
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 20px 10px;
+    }
+}
+
+/* Buy Section */
+#buy {
+    text-align: center;
+    background: linear-gradient(to bottom right, #1a1a1a, #2f2f2f); /* Subtle gradient background */
+    color: #fff;
+    padding: 50px 20px;
+}
+
+#buy h2 {
+    color: #3498db; /* Blue for headings */
+}
+
+.buy-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.buy-option {
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #34495e, #2c3e50); /* Subtle gradient background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.buy-option::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('film-icon.png') no-repeat center center; /* Replace 'film-icon.png' with your film icon image */
+    opacity: 0.2; /* Adjust the opacity of the icon */
+    z-index: -1; /* Send pseudo-element behind the buy option content */
+}
+
+.buy-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.buy-option h3 {
+    color: #3498db; /* Blue for option headings */
+    margin-bottom: 10px;
+}
+
+.buy-option p {
+    color: #bdc3c7;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(to bottom right, #e74c3c, #c0392b); /* Gradient button background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+
+.buy-button:hover {
+    background: linear-gradient(to bottom right, #c0392b, #a93226); /* Darker gradient on hover */
+    box-shadow: 0 0 20px #c0392b, 0 0 40px #c0392b; /* Add glow effect on hover */
+}
+
+
+#benefits {
+    margin-top: 50px;
+}
+
+.benefit {
+    text-align: center;
+    margin: 20px;
+}
+
+.benefit img {
+    width: 80px; /* Adjust the size of benefit icons */
+}
+
+.benefit p {
+    color: #bdc3c7;
+    margin-top: 10px;
+}
+
+
+
+/* Countdown and Discount Section */
+#countdown {
+    text-align: center;
+    background: linear-gradient(to bottom right, #e74c3c, #c0392b); /* Gradient background */
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease; /* Smooth transition for background color */
+}
+
+#countdown h2 {
+    color: #fff; /* White text for discount */
+    font-size: 36px; /* Larger font size */
+    font-family: 'Orbitron', sans-serif; /* Futuristic font family */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Text shadow for emphasis */
+    margin-bottom: 20px;
+}
+
+#countdown-timer {
+    font-size: 48px; /* Larger font size for the countdown timer */
+    color: #fff;
+    font-family: 'Digital-7', sans-serif; /* Digital-style font for countdown timer */
+    letter-spacing: 5px; /* Adjust letter spacing for a futuristic look */
+    animation: holographicEffect 1s infinite alternate; /* Add holographic effect animation */
+}
+
+@keyframes holographicEffect {
+    to {
+        transform: scale(1.1);
+        filter: hue-rotate(360deg);
+    }
+}
+
+#countdown p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#discount {
+    text-align: center;
+    background: linear-gradient(to bottom right, #e74c3c, #c0392b); /* Gradient background */
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease; /* Smooth transition for background color */
+}
+
+#discount h2 {
+    color: #fff; /* White text for discount */
+    font-size: 24px; /* Larger font size */
+}
+
+#discount p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#vouch {
+    padding: 50px 0;
+    background-color: #424242;
+    text-align: center;
+}
+
+.vouch-item {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: #424242;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.rating img {
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+}
+
+.vouch-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.customer-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* Footer */
+footer {
+    background: #2c3e50; /* Dark background color */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media only screen and (max-width: 768px) {
+        padding: 10px;
+    }
+}
+
+#contact-info,
+#social-media {
+    flex: 1;
+}
+
+#contact-info h3,
+#social-media h3 {
+    color: #3498db; /* Blue for headings */
+}
+
+#contact-info p {
+    color: #bdc3c7;
+    margin: 10px 0;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #3498db; /* Blue background color */
+    padding: 5px;
+    transition: background 0.3s ease;
+}
+
+.social-icon img:hover {
+    background: #2980b9; /* Darker blue on hover */
+}
