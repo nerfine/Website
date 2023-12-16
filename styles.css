@@ -1,131 +1,140 @@
-/* Body */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #111;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body h1, body h2, body h3, body p {
-    color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-}
-
-/* Header */
-header {
+    padding: 0;
     background-color: #1a1a1a;
     color: #fff;
+}
+
+.header {
     text-align: center;
-    padding: 1em;
-    font-family: 'Neon Lights', sans-serif;
-    position: relative;
-}
-
-header h1 {
-    font-size: 36px;
-    letter-spacing: 2px;
-}
-
-header::before {
-    animation: particleAnimation 3s linear infinite;
-}
-
-/* Section */
-section {
-    margin: 20px;
-    background: linear-gradient(to bottom right, #1a1a1a, #2f2f2f);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease, background 0.3s ease;
-    position: relative;
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.05;
-    z-index: -1;
-}
-
-h2 {
-    color: #3498db;
-}
-
-h3 {
-    color: #3498db;
-}
-
-.price-category li {
-    margin-bottom: 10px;
-    color: #bdc3c7;
-    transition: color 0.3s ease;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
+    padding: 50px 0;
+    background: #1a1a1a;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 50vh;
 }
 
-#contact-info,
-#social-media {
-    flex: 1;
+.service-card {
+    background: linear-gradient(to bottom, #2d2d2d, #1a1a1a);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    transition: background 0.3s, transform 0.3s;
 }
 
-#contact-info h3,
-#social-media h3 {
-    color: #3498db;
+.service-card:hover {
+    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+    transform: scale(1.05); /* Subtle box scale on hover */
 }
 
-#contact-info p {
-    color: #bdc3c7;
-    margin: 10px 0;
+.headline {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.social-icon {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-icon img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #3498db;
-    padding: 5px;
-    transition: background 0.3s ease;
-}
-
-.social-icon img:hover {
-    background: #2980b9;
+p {
+    margin-top: 10px;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2em;
+    margin-top: 10px;
     text-decoration: none;
-    background-color: #4CAF50;
     color: #fff;
-    border-radius: 5px;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    background-color: #3498db;
+    border-radius: 25px; /* Rounded corners */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3); /* Subtle shadow */
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #267bb6;
+    transform: scale(1.05); /* Subtle button scale on hover */
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3); /* Enhanced shadow on hover */
+}
+
+
+/* Add gaming-inspired icons with subtle glow effect */
+.icon {
+    font-size: 24px;
+    margin-right: 5px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* Glow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Parallax effect on hero section */
+.hero-section {
+    background: url('hero-background.jpg') center/cover fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Testimonials section */
+.testimonials {
+    background: #333;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.testimonial-card {
+    background: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 40px;
+    transition: transform 0.3s;
+}
+
+.testimonial-card img {
+    border-radius: 50%; /* Make the customer image circular */
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05); /* Subtle scale on hover */
+}
+
+.customer-name {
+    font-weight: bold;
+    margin-top: 10px;
 }
