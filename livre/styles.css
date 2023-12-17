@@ -5,6 +5,7 @@ body {
     padding: 20px;
     background-color: #111; /* Dark background color */
     color: #fff; /* Light text color */
+    overflow-x: hidden
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for background and text color */
     h1, h2, h3, p {
         color: #fff;
