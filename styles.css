@@ -1,140 +1,55 @@
+/* Global Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
-    color: #fff;
 }
 
-.header {
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    padding: 50px 0;
-    background: #1a1a1a;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
     color: #fff;
-}
-
-.header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 18px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh;
-}
-
-.service-card {
-    background: linear-gradient(to bottom, #2d2d2d, #1a1a1a);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 300px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.service-card:hover {
-    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
-    transform: scale(1.05); /* Subtle box scale on hover */
-}
-
-.headline {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-}
-
-p {
-    margin-top: 10px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
     text-decoration: none;
-    color: #fff;
-    background-color: #3498db;
-    border-radius: 25px; /* Rounded corners */
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3); /* Subtle shadow */
+    font-size: 1.2em;
 }
 
-.btn:hover {
-    background-color: #267bb6;
-    transform: scale(1.05); /* Subtle button scale on hover */
-    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3); /* Enhanced shadow on hover */
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-
-/* Add gaming-inspired icons with subtle glow effect */
-.icon {
-    font-size: 24px;
-    margin-right: 5px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* Glow effect */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .service-card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Parallax effect on hero section */
-.hero-section {
-    background: url('hero-background.jpg') center/cover fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
-/* Testimonials section */
-.testimonials {
-    background: #333;
-    padding: 50px 0;
-    text-align: center;
-    color: #fff;
-}
-
-.testimonial-card {
-    background: #444;
+main {
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 40px;
-    transition: transform 0.3s;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-card img {
-    border-radius: 50%; /* Make the customer image circular */
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.05); /* Subtle scale on hover */
-}
-
-.customer-name {
-    font-weight: bold;
-    margin-top: 10px;
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
