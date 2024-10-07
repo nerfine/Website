@@ -35,33 +35,30 @@ const translations = {
 // Function to switch language content
 function switchLanguage(lang) {
     const translation = translations[lang];
-    
-    // Update text content based on language
-    document.getElementById("page-title").textContent = translation.title;
-    document.getElementById("prologue-title").textContent = translation.prologueTitle;
-    document.getElementById("prologue-content").textContent = translation.prologueContent;
-    document.getElementById("footer-text").innerHTML = translation.footer;
+
+    // Check if the selected language exists
+    if (translation) {
+        // Update text content based on language
+        document.getElementById("page-title").textContent = translation.title;
+        document.getElementById("prologue-title").textContent = translation.prologueTitle;
+        document.getElementById("prologue-content").textContent = translation.prologueContent;
+        document.getElementById("footer-text").innerHTML = translation.footer;
+    }
 }
 
 // Add event listeners to language buttons
-const langButtons = document.querySelectorAll('.lang-btn');
-langButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const selectedLang = e.target.getAttribute('data-lang');
-        switchLanguage(selectedLang);
-    });
-});
-
-// Optional: Automatically set the language to the last selected language if the page reloads
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-    switchLanguage(savedLang);
+    const langButtons = document.querySelectorAll('.lang-btn');
 
-    // Save selected language when a button is clicked
     langButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            const lang = e.target.getAttribute('data-lang');
-            localStorage.setItem('selectedLanguage', lang);
+            const selectedLang = e.target.getAttribute('data-lang');
+            switchLanguage(selectedLang);
+            localStorage.setItem('selectedLanguage', selectedLang); // Save the selected language
         });
     });
+
+    // Load the saved language on page load
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
+    switchLanguage(savedLang);
 });
