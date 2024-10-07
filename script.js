@@ -36,13 +36,16 @@ const translations = {
 function switchLanguage(lang) {
     const translation = translations[lang];
 
-    // Check if the selected language exists
+    // Check if translation exists for selected language
     if (translation) {
-        // Update text content based on language
+        // Update content on the page
         document.getElementById("page-title").textContent = translation.title;
         document.getElementById("prologue-title").textContent = translation.prologueTitle;
         document.getElementById("prologue-content").textContent = translation.prologueContent;
         document.getElementById("footer-text").innerHTML = translation.footer;
+        console.log(`Switched to language: ${lang}`);  // Debugging log
+    } else {
+        console.error(`No translation available for ${lang}`);
     }
 }
 
@@ -53,12 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     langButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const selectedLang = e.target.getAttribute('data-lang');
-            switchLanguage(selectedLang);
-            localStorage.setItem('selectedLanguage', selectedLang); // Save the selected language
+            switchLanguage(selectedLang);  // Switch language based on button click
+            localStorage.setItem('selectedLanguage', selectedLang);  // Save language preference
         });
     });
 
     // Load the saved language on page load
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
-    switchLanguage(savedLang);
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';  // Default to English
+    switchLanguage(savedLang);  // Apply the saved language
+    console.log(`Loaded saved language: ${savedLang}`);  // Debugging log
 });
