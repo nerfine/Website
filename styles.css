@@ -8,15 +8,28 @@ body {
     padding: 0;
 }
 
-.translate-button {
-    margin: 10px 0;
+/* Styling for the language selector */
+.language-selector {
     text-align: center;
+    margin: 20px 0;
 }
 
-#google_translate_element {
-    display: inline-block;
-    margin-top: 10px;
+.lang-btn {
+    background-color: #333;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.lang-btn:hover {
+    background-color: #555;
+}
+
+/* Other styles remain unchanged */
 
 
 header {
